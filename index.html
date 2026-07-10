@@ -363,6 +363,10 @@
     display:none; background:#E9F3EC; border:1px solid var(--ok); color:#2C5B41;
     padding:14px 16px; border-radius:4px; font-size:14px; margin-bottom:14px;
   }
+  .error-msg{
+    display:none; background:#FBEAE8; border:1px solid #C0503F; color:#7A2A1F;
+    padding:14px 16px; border-radius:4px; font-size:14px; margin-bottom:14px;
+  }
 
   /* ---------- footer ---------- */
   footer{ background:#081521; color:#8CA0AC; padding:56px 0 28px; }
@@ -737,7 +741,8 @@
     </div>
 
     <form class="quote" id="quoteForm">
-      <div class="success-msg" id="successMsg">Opening your phone's messaging app with your request filled in &mdash; just hit send.</div>
+      <div class="success-msg" id="successMsg">Thanks &mdash; your request has been sent. We'll be in touch shortly.</div>
+      <div class="error-msg" id="errorMsg">Something went wrong sending your request. Please try again, or <a href="tel:+12366640061" style="color:inherit; text-decoration:underline;">call us directly</a>.</div>
       <div class="form-row">
         <div class="field">
           <label for="fname">Name</label>
@@ -764,8 +769,8 @@
         <label for="fmsg">Tell us what's happening</label>
         <textarea id="fmsg" name="message" placeholder="e.g. Water heater is leaking from the bottom, no hot water since this morning."></textarea>
       </div>
-      <button type="submit">Send my request &mdash; text us now</button>
-      <div class="form-note">This opens your phone's texting app addressed to (236) 664-0061. Prefer to talk? <a href="tel:+12366640061" style="color:var(--copper); text-decoration:underline;">Call instead</a>.</div>
+      <button type="submit">Send my request &mdash; get a free quote</button>
+      <div class="form-note">We'll email your request straight to our inbox. Prefer to talk? <a href="tel:+12366640061" style="color:var(--copper); text-decoration:underline;">Call instead</a>.</div>
     </form>
   </div>
 </section>
@@ -834,7 +839,9 @@
     var form = document.getElementById('quoteForm');
     if(!form) return;
     var successMsg = document.getElementById('successMsg');
-    var BUSINESS_PHONE = '+12366640061';
+    var errorMsg = document.getElementById('errorMsg');
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var ENDPOINT = 'https://bhaika-quote-form.ohiouser5a.workers.dev';
 
     form.addEventListener('submit', function(e){
       e.preventDefault();
@@ -843,21 +850,34 @@
       var service = document.getElementById('fservice').value;
       var message = document.getElementById('fmsg').value.trim();
 
-      var body = 'Quote request from ' + name + ' (' + phone + '). Service: ' + service + '.';
-      if(message){ body += ' Details: ' + message; }
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
 
-      successMsg.style.display = 'block';
-      successMsg.scrollIntoView({behavior:'smooth', block:'center'});
-
-      // Hand off to the phone's native texting app, addressed to the real business number.
-      // iOS and Android use slightly different sms: URI separators, so try the more
-      // widely supported one first.
-      var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-      var smsUrl = isIOS
-        ? 'sms:' + BUSINESS_PHONE + '&body=' + encodeURIComponent(body)
-        : 'sms:' + BUSINESS_PHONE + '?body=' + encodeURIComponent(body);
-
-      setTimeout(function(){ window.location.href = smsUrl; }, 400);
+      fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: name, phone: phone, service: service, message: message })
+      })
+        .then(function(res){
+          if(!res.ok) throw new Error('Request failed');
+          return res.json();
+        })
+        .then(function(data){
+          if(!data.success) throw new Error('Send failed');
+          form.reset();
+          successMsg.style.display = 'block';
+          successMsg.scrollIntoView({behavior:'smooth', block:'center'});
+        })
+        .catch(function(){
+          errorMsg.style.display = 'block';
+          errorMsg.scrollIntoView({behavior:'smooth', block:'center'});
+        })
+        .finally(function(){
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send my request \u2014 get a free quote';
+        });
     });
   })();
 </script>
