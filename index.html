@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhaika Plumbing &amp; Heating Ltd. | Trusted Plumber in Abbotsford, BC</title>
+<meta name="description" content="Licensed plumbing &amp; heating contractor based in Abbotsford, BC. 5.0 stars, 31 Google reviews. Call for a free quote: (236) 664-0061.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E2233;
+    --ink-2:#173650;
+    --ink-3:#1F4763;
+    --paper:#EFEBE0;
+    --paper-dim:#DFDACB;
+    --copper:#C1652F;
+    --copper-light:#E5905A;
+    --brass:#C9A227;
+    --steel:#93A2AB;
+    --line:rgba(239,235,224,0.16);
+    --line-dark:rgba(14,34,51,0.14);
+    --ok:#4C8C6B;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img,svg{display:block; max-width:100%;}
+  a{color:inherit; text-decoration:none;}
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  .display{font-family:'Big Shoulders Display', sans-serif; text-transform:uppercase; letter-spacing:0.01em;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  @media (max-width:640px){.wrap{padding:0 20px;}}
+
+  /* ---------- reduced motion ---------- */
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+
+  /* ---------- top utility bar ---------- */
+  .utility{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.04em;
+  }
+  .utility .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:9px; padding-bottom:9px;
+  }
+  .utility .status{display:flex; align-items:center; gap:8px; color:var(--paper);}
+  .dot{width:7px; height:7px; border-radius:50%; background:var(--ok); box-shadow:0 0 0 0 rgba(76,140,107,0.6); animation:pulse 2.2s infinite;}
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(76,140,107,0.55);}
+    70%{box-shadow:0 0 0 6px rgba(76,140,107,0);}
+    100%{box-shadow:0 0 0 0 rgba(76,140,107,0);}
+  }
+  .utility .right{display:flex; gap:16px; color:var(--steel); align-items:center; flex-wrap:wrap; justify-content:flex-end;}
+  .utility .right a{color:var(--paper);}
+  .utility .right span.hide-mobile{display:inline;}
+  @media(max-width:640px){ .utility .right span.hide-mobile{display:none;} }
+
+  /* ---------- header ---------- */
+  header.site{
+    background:var(--ink);
+    color:var(--paper);
+    position:sticky; top:0; z-index:50;
+    border-bottom:1px solid var(--line);
+  }
+  nav.wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:16px; padding-bottom:16px;
+  }
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand-mark{
+    width:42px; height:42px; flex:none;
+  }
+  .brand-text{line-height:1;}
+  .brand-text .name{
+    font-family:'Big Shoulders Display', sans-serif;
+    font-weight:700; font-size:21px; letter-spacing:0.01em;
+    text-transform:uppercase;
+  }
+  .brand-text .sub{
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px;
+    color:var(--copper-light); letter-spacing:0.14em; margin-top:3px;
+  }
+  .nav-links{display:flex; gap:28px; font-size:16px; font-weight:500;}
+  .nav-links a{color:var(--paper); opacity:0.82; position:relative;}
+  .nav-links a:hover{opacity:1;}
+  @media(max-width:860px){.nav-links{display:none;}}
+  .call-btn{
+    display:flex; align-items:center; gap:9px;
+    background:var(--copper);
+    color:var(--ink);
+    font-weight:700;
+    font-size:15.5px;
+    padding:13px 20px;
+    border-radius:4px;
+    white-space:nowrap;
+    min-height:44px;
+  }
+  .call-btn svg{width:16px; height:16px;}
+  .call-btn:hover{background:var(--copper-light);}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    background:
+      radial-gradient(ellipse 900px 480px at 78% 8%, rgba(193,101,47,0.20), transparent 60%),
+      linear-gradient(180deg, var(--ink) 0%, #0B1C2B 100%);
+    color:var(--paper);
+    overflow:hidden;
+    padding-top:88px;
+    padding-bottom:70px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{
+    display:block; max-width:640px;
+  }
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:9px;
+    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.12em;
+    color:var(--copper-light); text-transform:uppercase;
+    border:1px solid rgba(229,144,90,0.35);
+    padding:6px 12px; border-radius:2px;
+    margin-bottom:22px;
+  }
+  .eyebrow .dot{background:var(--copper-light); box-shadow:none; animation:none;}
+
+  h1.hero-head{
+    font-size:clamp(40px, 6vw, 68px);
+    line-height:0.98;
+    font-weight:800;
+    margin-bottom:22px;
+  }
+  h1.hero-head .accent{ color:var(--copper-light); }
+
+  .hero-sub{
+    font-size:17.5px; line-height:1.6; color:#C9D3D9;
+    max-width:480px; margin-bottom:32px;
+  }
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:36px;}
+  .btn-primary{
+    background:var(--copper); color:var(--ink); font-weight:700; font-size:15.5px;
+    padding:15px 26px; border-radius:3px; display:inline-flex; align-items:center; gap:10px;
+    box-shadow:0 10px 26px -10px rgba(193,101,47,0.55);
+  }
+  .btn-primary:hover{background:var(--copper-light);}
+  .btn-primary svg{width:17px; height:17px;}
+  .btn-secondary{
+    border:1px solid rgba(239,235,224,0.32); color:var(--paper); font-weight:600; font-size:15.5px;
+    padding:15px 24px; border-radius:3px;
+  }
+  .btn-secondary:hover{border-color:rgba(239,235,224,0.6); background:rgba(239,235,224,0.04);}
+
+  .trust-row{display:flex; flex-wrap:wrap; gap:26px 34px;}
+  .trust-item{display:flex; align-items:center; gap:10px; font-size:14px; color:#C9D3D9;}
+  .stars{display:flex; gap:2px;}
+  .stars svg{width:15px; height:15px; fill:var(--brass);}
+  .trust-num{font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:19px; color:var(--paper); margin-right:2px;}
+
+  /* ---------- marquee strip ---------- */
+  .strip{
+    background:var(--copper); color:var(--ink);
+    overflow:hidden; white-space:nowrap; border-bottom:1px solid rgba(14,34,51,0.15);
+  }
+  .strip-track{
+    display:inline-block; padding:11px 0;
+    font-family:'IBM Plex Mono', monospace; font-weight:600; font-size:13px; letter-spacing:0.08em;
+    animation:marquee 26s linear infinite;
+  }
+  .strip-track span{ margin:0 22px; }
+  @keyframes marquee{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+
+  /* ---------- section shell ---------- */
+  section{ padding:88px 0; }
+  @media(max-width:640px){ section{padding:60px 0;} }
+  .section-head{ max-width:640px; margin-bottom:52px; }
+  .kicker{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.16em;
+    color:var(--copper); text-transform:uppercase; margin-bottom:14px; display:block;
+  }
+  h2.section-title{
+    font-family:'Big Shoulders Display', sans-serif; text-transform:uppercase;
+    font-weight:700; font-size:clamp(30px,4vw,44px); line-height:1.02;
+  }
+  .section-desc{ margin-top:16px; font-size:16px; line-height:1.65; color:#3E5364; max-width:560px; }
+
+  /* ---------- services ---------- */
+  .services-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+    background:var(--line-dark);
+    border:1px solid var(--line-dark);
+  }
+  @media(max-width:900px){ .services-grid{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:600px){ .services-grid{grid-template-columns:1fr;} }
+  .service-card{
+    background:var(--paper); padding:32px 26px; position:relative;
+    transition:background 0.2s ease;
+  }
+  .service-card:hover{ background:#F6F3E9; }
+  .service-card .num{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--copper); margin-bottom:18px; display:block;
+  }
+  .service-card svg{ width:30px; height:30px; margin-bottom:18px; color:var(--ink); }
+  .service-card h3{
+    font-family:'Big Shoulders Display', sans-serif; text-transform:uppercase; font-weight:700;
+    font-size:20px; margin-bottom:10px; letter-spacing:0.01em;
+  }
+  .service-card p{ font-size:15.5px; line-height:1.6; color:#4B5D6B; }
+  .service-card.emergency{ background:var(--ink); color:var(--paper); }
+  .service-card.emergency h3{ color:var(--copper-light); }
+  .service-card.emergency p{ color:#B9C6CD; }
+  .service-card.emergency svg{ color:var(--copper-light); }
+  .service-card.emergency .num{ color:var(--brass); }
+
+  /* ---------- how it works / ticket ---------- */
+  .ticket-section{ background:var(--ink); color:var(--paper); }
+  .ticket-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
+  @media(max-width:900px){ .ticket-grid{grid-template-columns:1fr;} }
+  .steps{ display:flex; flex-direction:column; gap:0; }
+  .step{ display:flex; gap:20px; padding:22px 0; border-top:1px solid var(--line); }
+  .step:last-child{ border-bottom:1px solid var(--line); }
+  .step .step-num{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:800; font-size:30px; color:var(--copper-light);
+    width:44px; flex:none;
+  }
+  .step h4{ font-size:16.5px; margin-bottom:6px; font-weight:600; }
+  .step p{ font-size:15.5px; color:#AEBBC3; line-height:1.6; max-width:380px; }
+
+  /* the work order ticket visual */
+  .work-order{
+    background:var(--paper); color:var(--ink);
+    border-radius:4px; padding:30px 30px 26px;
+    position:relative;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,0.45);
+  }
+  .work-order::before{
+    content:""; position:absolute; left:-9px; top:50%; transform:translateY(-50%);
+    width:18px; height:18px; background:var(--ink); border-radius:50%;
+  }
+  .work-order::after{
+    content:""; position:absolute; right:-9px; top:50%; transform:translateY(-50%);
+    width:18px; height:18px; background:var(--ink); border-radius:50%;
+  }
+  .wo-top{ display:flex; justify-content:space-between; align-items:flex-start; border-bottom:1.5px dashed var(--ink); padding-bottom:16px; margin-bottom:18px; }
+  .wo-top .wo-label{ font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.1em; color:#6B5A46; text-transform:uppercase; }
+  .wo-top .wo-id{ font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:22px; }
+  .wo-badge{
+    background:var(--copper); color:var(--paper); font-family:'IBM Plex Mono',monospace;
+    font-size:11px; font-weight:600; padding:5px 10px; border-radius:2px; letter-spacing:0.06em;
+  }
+  .wo-row{ display:flex; justify-content:space-between; font-size:13.5px; padding:9px 0; border-bottom:1px solid var(--line-dark); }
+  .wo-row span:first-child{ color:#6B5A46; font-family:'IBM Plex Mono', monospace; font-size:11.5px; text-transform:uppercase; letter-spacing:0.05em; }
+  .wo-row span:last-child{ font-weight:600; }
+  .wo-foot{ margin-top:18px; display:flex; align-items:center; justify-content:space-between; }
+  .wo-foot .stamp{
+    font-family:'Big Shoulders Display', sans-serif; font-weight:800; color:var(--ok);
+    border:2.5px solid var(--ok); border-radius:4px; padding:5px 12px; font-size:15px;
+    transform:rotate(-6deg); letter-spacing:0.05em;
+  }
+
+  /* ---------- reviews ---------- */
+  .reviews-wrap{ background:var(--paper); }
+  .review-top{ display:flex; align-items:center; gap:22px; flex-wrap:wrap; margin-bottom:40px; }
+  .score-block{
+    display:flex; align-items:baseline; gap:14px; background:var(--ink); color:var(--paper);
+    padding:18px 26px; border-radius:4px;
+  }
+  .score-block .score{ font-family:'Big Shoulders Display', sans-serif; font-weight:800; font-size:44px; line-height:1; }
+  .score-block .score-meta{ font-size:13px; color:var(--steel); }
+  .score-block .stars svg{ fill:var(--brass); width:14px; height:14px; }
+
+  .reviews-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  @media(max-width:900px){ .reviews-grid{grid-template-columns:1fr 1fr;} }
+  @media(max-width:640px){ .reviews-grid{grid-template-columns:1fr;} }
+  .review-card{
+    background:#fff; border:1px solid var(--line-dark); border-radius:4px; padding:24px;
+  }
+  .review-card .stars{ margin-bottom:14px; }
+  .review-card .stars svg{ fill:var(--brass); width:15px; height:15px; }
+  .review-card p{ font-size:15.5px; line-height:1.65; color:#33454F; margin-bottom:16px; }
+  .review-card .who{ font-size:13px; font-weight:600; color:var(--ink); display:flex; align-items:center; gap:8px; }
+  .review-card .who .avatar{
+    width:26px; height:26px; border-radius:50%; background:var(--copper); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700;
+    font-family:'IBM Plex Mono', monospace;
+  }
+  .review-note{ margin-top:28px; font-size:12.5px; color:#7A8B95; font-family:'IBM Plex Mono', monospace; }
+
+  /* ---------- coverage map ---------- */
+  .coverage{ background:#E5E0D2; }
+  .coverage-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
+  @media(max-width:900px){ .coverage-grid{grid-template-columns:1fr;} }
+  .map-preview{
+    position:relative; width:100%; aspect-ratio:4/3.2; border-radius:8px; overflow:hidden;
+    border:1px solid var(--line-dark); box-shadow:0 20px 40px -18px rgba(14,34,51,0.35);
+  }
+  .map-preview svg{ width:100%; height:100%; }
+  .map-preview .map-cta{
+    position:absolute; left:50%; bottom:18px; transform:translateX(-50%);
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--paper); color:var(--ink); font-weight:700; font-size:14.5px;
+    padding:12px 20px; border-radius:30px; white-space:nowrap;
+    box-shadow:0 10px 24px -8px rgba(0,0,0,0.4);
+  }
+  .map-preview .map-cta:hover{ background:#fff; }
+  .map-preview .map-cta svg{ width:16px; height:16px; flex:none; }
+  .coverage-list{ display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+  .coverage-list span{
+    font-family:'IBM Plex Mono', monospace; font-size:12.5px; background:var(--paper);
+    border:1px solid var(--line-dark); padding:8px 13px; border-radius:2px;
+  }
+
+  /* ---------- form ---------- */
+  .cta-section{
+    background:linear-gradient(180deg, #0B1C2B 0%, var(--ink) 100%);
+    color:var(--paper);
+  }
+  .cta-grid{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:flex-start; }
+  @media(max-width:900px){ .cta-grid{grid-template-columns:1fr; gap:44px;} }
+  .cta-left h2{ margin-bottom:18px; }
+  .cta-left p{ color:#B9C6CD; font-size:16px; line-height:1.65; max-width:440px; margin-bottom:30px; }
+  .contact-line{ display:flex; align-items:center; gap:12px; margin-bottom:16px; font-size:15.5px; }
+  .contact-line svg{ width:19px; height:19px; color:var(--copper-light); flex:none; }
+
+  form.quote{
+    background:var(--paper); color:var(--ink); border-radius:6px; padding:32px;
+  }
+  form.quote .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+  @media(max-width:520px){ form.quote .form-row{grid-template-columns:1fr;} }
+  form.quote label{
+    display:block; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.06em;
+    text-transform:uppercase; color:#6B7B85; margin-bottom:6px;
+  }
+  form.quote input, form.quote select, form.quote textarea{
+    width:100%; border:1px solid #C9C3B0; background:#fff; border-radius:3px;
+    padding:11px 12px; font-family:'IBM Plex Sans', sans-serif; font-size:14.5px; color:var(--ink);
+  }
+  form.quote input:focus, form.quote select:focus, form.quote textarea:focus{
+    outline:2px solid var(--copper); outline-offset:1px; border-color:var(--copper);
+  }
+  form.quote .field{ margin-bottom:14px; }
+  form.quote textarea{ resize:vertical; min-height:88px; }
+  form.quote button{
+    width:100%; background:var(--copper); color:var(--ink); font-weight:700; font-size:15.5px;
+    padding:15px; border:none; border-radius:3px; cursor:pointer; margin-top:6px;
+  }
+  form.quote button:hover{ background:var(--copper-light); }
+  .form-note{ font-size:12px; color:#7A8B95; margin-top:12px; text-align:center; font-family:'IBM Plex Mono', monospace; }
+  .success-msg{
+    display:none; background:#E9F3EC; border:1px solid var(--ok); color:#2C5B41;
+    padding:14px 16px; border-radius:4px; font-size:14px; margin-bottom:14px;
+  }
+
+  /* ---------- footer ---------- */
+  footer{ background:#081521; color:#8CA0AC; padding:56px 0 28px; }
+  .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; margin-bottom:44px; }
+  @media(max-width:760px){ .footer-grid{grid-template-columns:1fr; gap:32px;} }
+  footer h5{
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--copper-light); margin-bottom:16px;
+  }
+  footer .f-brand{ display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+  footer .f-brand .name{ font-family:'Big Shoulders Display', sans-serif; font-weight:700; font-size:19px; color:var(--paper); text-transform:uppercase; }
+  footer p{ font-size:15px; line-height:1.65; max-width:320px; }
+  footer ul{ list-style:none; }
+  footer li{ margin-bottom:10px; font-size:14px; }
+  footer li a:hover{ color:var(--paper); }
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.08); padding-top:22px;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+    font-size:12.5px; font-family:'IBM Plex Mono', monospace; color:#5D717C;
+  }
+
+  /* ---------- sticky mobile call bar ---------- */
+  .mobile-call{
+    display:none; position:fixed; bottom:0; left:0; right:0; z-index:60;
+    background:var(--ink); border-top:1px solid var(--line);
+    padding:12px 18px; align-items:center; justify-content:space-between; gap:12px;
+  }
+  .mobile-call .mc-text{ color:var(--paper); font-size:13px; }
+  .mobile-call .mc-text b{ display:block; font-family:'Big Shoulders Display', sans-serif; font-size:16px; }
+  @media(max-width:760px){
+    .mobile-call{ display:flex; }
+    body{ padding-bottom:70px; }
+  }
+
+  /* focus visibility */
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{
+    outline:3px solid var(--copper-light); outline-offset:2px;
+  }
+
+  /* ---------- accessibility: larger text toggle ---------- */
+  .text-toggle{
+    display:inline-flex; align-items:center; gap:6px;
+    background:transparent; border:1.5px solid var(--copper-light); color:var(--paper);
+    font-family:'IBM Plex Mono', monospace; font-size:12.5px; font-weight:600;
+    padding:6px 12px; border-radius:3px; cursor:pointer; letter-spacing:0.02em;
+  }
+  .text-toggle:hover{ background:rgba(229,144,90,0.12); }
+  .text-toggle[aria-pressed="true"]{ background:var(--copper-light); color:var(--ink); }
+
+  /* When enabled, JS applies this class to <html> to bump readable text size site-wide */
+  html.large-text{ zoom:1.22; }
+  @supports not (zoom:1.22){
+    html.large-text body{ transform:scale(1.15); transform-origin:top left; width:87%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== utility bar ===== -->
+<div class="utility">
+  <div class="wrap">
+    <div class="status"><span class="dot"></span> Now booking service calls across the Lower Mainland</div>
+    <div class="right">
+      <button id="textSizeToggle" class="text-toggle" type="button" aria-pressed="false">A+ Larger Text</button>
+      <span class="hide-mobile">5.0 stars &middot; 31 Google reviews</span>
+      <a href="tel:+12366640061">(236) 664-0061</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== header ===== -->
+<header class="site">
+  <nav class="wrap">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="40" height="40" rx="4" stroke="#E5905A" stroke-width="1.5"/>
+        <path d="M10 28V17a4 4 0 0 1 4-4h6" stroke="#EFEBE0" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M32 14v11a4 4 0 0 1-4 4h-6" stroke="#C1652F" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="20" cy="13" r="2.4" fill="#E5905A"/>
+        <circle cx="22" cy="29" r="2.4" fill="#C1652F"/>
+      </svg>
+      <div class="brand-text">
+        <div class="name">Bhaika Plumbing</div>
+        <div class="sub">&amp; HEATING LTD.</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#how">How it works</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#coverage">Service area</a>
+      <a href="#book">Get a quote</a>
+    </div>
+    <a class="call-btn" href="tel:+12366640061">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call now
+    </a>
+  </nav>
+</header>
+
+<!-- ===== hero ===== -->
+<section class="hero" style="padding-top:64px;">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Locally owned &amp; operated &mdash; Abbotsford, BC</div>
+      <h1 class="hero-head">Fix it right.<br>Fix it <span class="accent">once.</span></h1>
+      <p class="hero-sub">Licensed plumbing and heating contractors based right here in Abbotsford. Arrive on time, explain the work clearly, leave the place spotless &mdash; that's the whole job.</p>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="tel:+12366640061">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (236) 664-0061
+        </a>
+        <a class="btn-secondary" href="#book">Get a free quote</a>
+      </div>
+      <div class="trust-row">
+        <div class="trust-item"><span class="trust-num">5.0</span><span class="stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+        </span> 31 Google reviews</div>
+        <div class="trust-item">&#128737; Licensed &amp; insured</div>
+        <div class="trust-item">&#128205; Serving the Lower Mainland</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== marquee ===== -->
+<div class="strip">
+  <div class="strip-track">
+    <span>BOOK YOUR SERVICE CALL TODAY</span><span>&#9670;</span>
+    <span>LICENSED &amp; INSURED</span><span>&#9670;</span>
+    <span>5.0 STARS &middot; 31 GOOGLE REVIEWS</span><span>&#9670;</span>
+    <span>PROUDLY SERVING ABBOTSFORD, BC</span><span>&#9670;</span>
+    <span>BOOK YOUR SERVICE CALL TODAY</span><span>&#9670;</span>
+    <span>LICENSED &amp; INSURED</span><span>&#9670;</span>
+    <span>5.0 STARS &middot; 31 GOOGLE REVIEWS</span><span>&#9670;</span>
+    <span>PROUDLY SERVING ABBOTSFORD, BC</span><span>&#9670;</span>
+  </div>
+</div>
+
+<!-- ===== services ===== -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">What we fix</span>
+      <h2 class="section-title">Full-service plumbing &amp; heating</h2>
+      <p class="section-desc">From a dripping tap to a dead furnace in January, one crew handles the whole job &mdash; no subcontracting, no guesswork.</p>
+    </div>
+  </div>
+  <div class="wrap" style="padding:0;">
+    <div class="services-grid">
+      <div class="service-card emergency">
+        <span class="num">01</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+        <h3>Free quotes</h3>
+        <p>Call and tell us what's going on &mdash; we'll give you straight, upfront pricing before any work starts.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">02</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v6m0 0c-3 0-6 3-6 7a6 6 0 0 0 12 0c0-4-3-7-6-7z"/></svg>
+        <h3>Drain &amp; sewer cleaning</h3>
+        <p>Camera inspection and hydro-jetting for clogged, slow, or backed-up drain lines.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">03</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M9 8h6M9 12h6"/></svg>
+        <h3>Water heaters</h3>
+        <p>Tank and tankless install, repair, and flushing &mdash; gas or electric.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">04</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 14a8 8 0 1 1 16 0c0 4-4 6-4 8H8c0-2-4-4-4-8z"/></svg>
+        <h3>Furnace &amp; heating repair</h3>
+        <p>Diagnostics, repair, and replacement to keep your Abbotsford home warm through the winter.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">05</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+        <h3>Gas fitting</h3>
+        <p>Certified gas line installation and repair for ranges, BBQs, furnaces, and fireplaces.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">06</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V9l8-6 8 6v12M9 21v-6h6v6"/></svg>
+        <h3>Reno &amp; new construction</h3>
+        <p>Full rough-in and fixture installation for kitchen, bathroom, and whole-home projects.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== how it works ===== -->
+<section id="how" class="ticket-section">
+  <div class="wrap">
+    <div style="max-width:640px;">
+      <span class="kicker">How it works</span>
+      <h2 class="section-title" style="margin-bottom:10px;">Every job, on the record</h2>
+      <p style="color:#AEBBC3; font-size:15.5px; margin-bottom:8px; max-width:420px;">No surprise invoices. You get a written work order before we turn a single wrench.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div><h4>Call or book online</h4><p>Tell us what's going on and pick a day that works for your schedule.</p></div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div><h4>We diagnose &amp; quote upfront</h4><p>Flat, upfront pricing before any work starts &mdash; no hourly surprises.</p></div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div><h4>Licensed techs do the work</h4><p>Clean, code-compliant work with parts warrantied.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== reviews ===== -->
+<section id="reviews" class="reviews-wrap">
+  <div class="wrap">
+    <div class="review-top">
+      <div class="score-block">
+        <span class="score">5.0</span>
+        <div class="score-meta">
+          <div class="stars">
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          </div>
+          31 Google reviews
+        </div>
+      </div>
+      <div>
+        <span class="kicker" style="margin-bottom:6px;">What Abbotsford says</span>
+        <h2 class="section-title" style="font-size:clamp(24px,3vw,32px);">A perfect record, job after job</h2>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+        </div>
+        <p>"Bhaika Plumbing did a great job, arrived on time, replaced our toilet efficiently, and was very accommodating. Excellent service overall."</p>
+        <div class="who"><span class="avatar">PJ</span> Pavandeep Judge</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+        </div>
+        <p>"The team that came out to re-pipe our house was very professional and courteous. Very polite, accommodating, extremely knowledgeable and the prices are very fair."</p>
+        <div class="who"><span class="avatar">CS</span> Chamkaur Singh</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+        </div>
+        <p>"Bhaika plumbing did an excellent job, they were professional, arrived on time, lower pricing, work was done neatly and explained clearly. Highly recommend."</p>
+        <div class="who"><span class="avatar">HS</span> Harpreet Sharma</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+        </div>
+        <p>"Quick, knowledgeable and affordable. We had a main line blockage and Hardeep cleared it very quickly for a lower price than other quotes. Highly recommend."</p>
+        <div class="who"><span class="avatar">GD</span> G Dhillon</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+        </div>
+        <p>"Hardeep did an excellent job with the installation on my 2 sinks and ensured everything was leak-free. Professional, efficient, and left the workspace spotless."</p>
+        <div class="who"><span class="avatar">BK</span> B Kang</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+        </div>
+        <p>"Water heater replacement: Bhaika did an excellent job installing our hot water heater. We will be using him for other plumbing projects."</p>
+        <div class="who"><span class="avatar">AS</span> Arsh Sivia</div>
+      </div>
+    </div>
+    <div class="review-note">&#9432; Reviews shown as posted by customers on Google.</div>
+  </div>
+</section>
+
+<!-- ===== coverage ===== -->
+<section id="coverage" class="coverage">
+  <div class="wrap coverage-grid">
+    <div>
+      <span class="kicker">Service area</span>
+      <h2 class="section-title">Proudly serving the Lower Mainland</h2>
+      <p class="section-desc">From Vancouver through to Mission &mdash; call to check if we can get to you.</p>
+      <div class="coverage-list">
+        <span>Vancouver</span><span>Burnaby</span><span>Coquitlam</span><span>Richmond</span>
+        <span>Surrey</span><span>Langley</span><span>Mission</span><span>Abbotsford</span>
+      </div>
+    </div>
+    <a class="map-preview" href="https://www.google.com/maps/@49.15,-122.35,10z/data=!3m1!1e3" target="_blank" rel="noopener" aria-label="Open satellite map of our Lower Mainland service area on Google Maps">
+      <svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustrated satellite-style map spanning Vancouver to Abbotsford">
+        <rect x="0" y="0" width="400" height="320" fill="#3E4A34"/>
+        <path d="M0 0 L400 0 L400 90 C320 70, 260 110, 200 95 C130 78, 70 40, 0 60 Z" fill="#4E5C3E"/>
+        <path d="M0 320 L400 320 L400 220 C330 250, 260 200, 190 230 C120 258, 60 210, 0 250 Z" fill="#465237"/>
+        <path d="M20 40 C60 90, 40 160, 90 200 C140 240, 220 210, 260 250 C300 285, 340 270, 390 300"
+          stroke="#6E86A8" stroke-width="14" fill="none" opacity="0.85"/>
+        <path d="M20 40 C60 90, 40 160, 90 200 C140 240, 220 210, 260 250 C300 285, 340 270, 390 300"
+          stroke="#89A2C2" stroke-width="4" fill="none" opacity="0.6"/>
+        <circle cx="55" cy="60" r="5" fill="#E5905A"/><text x="65" y="58" fill="#F4F1E8" font-family="IBM Plex Mono, monospace" font-size="11">VANCOUVER</text>
+        <circle cx="120" cy="95" r="4" fill="#EFEBE0"/><text x="130" y="92" fill="#EFEBE0" font-family="IBM Plex Mono, monospace" font-size="10">BURNABY</text>
+        <circle cx="185" cy="80" r="4" fill="#EFEBE0"/><text x="195" y="77" fill="#EFEBE0" font-family="IBM Plex Mono, monospace" font-size="10">COQUITLAM</text>
+        <circle cx="70" cy="150" r="4" fill="#EFEBE0"/><text x="80" y="153" fill="#EFEBE0" font-family="IBM Plex Mono, monospace" font-size="10">RICHMOND</text>
+        <circle cx="150" cy="185" r="4" fill="#EFEBE0"/><text x="160" y="188" fill="#EFEBE0" font-family="IBM Plex Mono, monospace" font-size="10">SURREY</text>
+        <circle cx="230" cy="215" r="4" fill="#EFEBE0"/><text x="240" y="218" fill="#EFEBE0" font-family="IBM Plex Mono, monospace" font-size="10">LANGLEY</text>
+        <circle cx="305" cy="255" r="4" fill="#EFEBE0"/><text x="315" y="258" fill="#EFEBE0" font-family="IBM Plex Mono, monospace" font-size="10">MISSION</text>
+        <circle cx="352" cy="282" r="6" fill="#C1652F"/><text x="288" y="302" fill="#F4F1E8" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1">ABBOTSFORD</text>
+      </svg>
+      <span class="map-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 20l-5.447-2.724A1 1 0 0 1 3 16.382V5.618a1 1 0 0 1 1.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0 0 21 18.382V7.618a1 1 0 0 0-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+        Open satellite map on Google Maps
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- ===== quote cta ===== -->
+<section id="book" class="cta-section">
+  <div class="wrap cta-grid">
+    <div class="cta-left">
+      <span class="kicker">Get a free quote</span>
+      <h2 class="section-title" style="margin-bottom:14px;">Ready to get it fixed?</h2>
+      <p>Fill out the form and we'll send it straight to our phone as a text, or just call us directly.</p>
+      <a class="contact-line" href="tel:+12366640061">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (236) 664-0061
+      </a>
+      <a class="contact-line" href="https://www.instagram.com/bhaika_plumbing" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        @bhaika_plumbing
+      </a>
+      <div class="contact-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Proudly serving the Lower Mainland
+      </div>
+    </div>
+
+    <form class="quote" id="quoteForm">
+      <div class="success-msg" id="successMsg">Opening your phone's messaging app with your request filled in &mdash; just hit send.</div>
+      <div class="form-row">
+        <div class="field">
+          <label for="fname">Name</label>
+          <input id="fname" name="name" type="text" placeholder="Jasmeet Kaur" required>
+        </div>
+        <div class="field">
+          <label for="fphone">Your phone</label>
+          <input id="fphone" name="phone" type="tel" placeholder="(236) 555-0123" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="fservice">Service needed</label>
+        <select id="fservice" name="service">
+          <option>Toilet / fixture</option>
+          <option>Drain / sewer</option>
+          <option>Water heater</option>
+          <option>Furnace / heating</option>
+          <option>Gas fitting</option>
+          <option>Renovation / new install</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fmsg">Tell us what's happening</label>
+        <textarea id="fmsg" name="message" placeholder="e.g. Water heater is leaking from the bottom, no hot water since this morning."></textarea>
+      </div>
+      <button type="submit">Send my request &mdash; text us now</button>
+      <div class="form-note">This opens your phone's texting app addressed to (236) 664-0061. Prefer to talk? <a href="tel:+12366640061" style="color:var(--copper); text-decoration:underline;">Call instead</a>.</div>
+    </form>
+  </div>
+</section>
+
+
+<!-- ===== footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="f-brand">
+          <svg width="30" height="30" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="40" height="40" rx="4" stroke="#E5905A" stroke-width="1.5"/>
+            <path d="M10 28V17a4 4 0 0 1 4-4h6" stroke="#EFEBE0" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M32 14v11a4 4 0 0 1-4 4h-6" stroke="#C1652F" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+          <span class="name">Bhaika Plumbing &amp; Heating Ltd.</span>
+        </div>
+        <p>Licensed plumbing and heating contractor proudly based in Abbotsford, BC.</p>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+12366640061">(236) 664-0061</a></li>
+          <li>Serving the Lower Mainland</li>
+          <li><a href="https://www.instagram.com/bhaika_plumbing" target="_blank" rel="noopener">Instagram &#8599;</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#coverage">Service area</a></li>
+          <li><a href="#book">Get a quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Bhaika Plumbing and Heating Ltd. All rights reserved.</span>
+      <span>Serving the Lower Mainland</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== sticky mobile call bar ===== -->
+<div class="mobile-call">
+  <div class="mc-text">Need a plumber?<b>Get a free quote</b></div>
+  <a class="call-btn" href="tel:+12366640061">Call</a>
+</div>
+
+<script>
+  (function(){
+    var btn = document.getElementById('textSizeToggle');
+    if(!btn) return;
+    var enabled = false;
+    btn.addEventListener('click', function(){
+      enabled = !enabled;
+      document.documentElement.classList.toggle('large-text', enabled);
+      btn.setAttribute('aria-pressed', String(enabled));
+      btn.textContent = enabled ? 'A- Normal Text' : 'A+ Larger Text';
+    });
+  })();
+
+  (function(){
+    var form = document.getElementById('quoteForm');
+    if(!form) return;
+    var successMsg = document.getElementById('successMsg');
+    var BUSINESS_PHONE = '+12366640061';
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var name = document.getElementById('fname').value.trim();
+      var phone = document.getElementById('fphone').value.trim();
+      var service = document.getElementById('fservice').value;
+      var message = document.getElementById('fmsg').value.trim();
+
+      var body = 'Quote request from ' + name + ' (' + phone + '). Service: ' + service + '.';
+      if(message){ body += ' Details: ' + message; }
+
+      successMsg.style.display = 'block';
+      successMsg.scrollIntoView({behavior:'smooth', block:'center'});
+
+      // Hand off to the phone's native texting app, addressed to the real business number.
+      // iOS and Android use slightly different sms: URI separators, so try the more
+      // widely supported one first.
+      var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      var smsUrl = isIOS
+        ? 'sms:' + BUSINESS_PHONE + '&body=' + encodeURIComponent(body)
+        : 'sms:' + BUSINESS_PHONE + '?body=' + encodeURIComponent(body);
+
+      setTimeout(function(){ window.location.href = smsUrl; }, 400);
+    });
+  })();
+</script>
+
+</body>
+</html>
