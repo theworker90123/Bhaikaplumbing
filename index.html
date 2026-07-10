@@ -750,7 +750,7 @@
         </div>
         <div class="field">
           <label for="fphone">Your phone</label>
-          <input id="fphone" name="phone" type="tel" placeholder="(236) 555-0123" required>
+          <input id="fphone" name="phone" type="tel" placeholder="(236) 555-0123" pattern="[0-9()\-\+\s]{10,}" title="Enter a valid phone number (at least 10 digits)" required>
         </div>
       </div>
       <div class="field">
@@ -845,10 +845,32 @@
 
     form.addEventListener('submit', function(e){
       e.preventDefault();
+
+      // The browser's built-in "required"/"pattern" checks never fire on their own
+      // once we've called preventDefault() above, so we trigger them manually here.
+      if(!form.checkValidity()){
+        form.reportValidity();
+        return;
+      }
+
       var name = document.getElementById('fname').value.trim();
       var phone = document.getElementById('fphone').value.trim();
       var service = document.getElementById('fservice').value;
       var message = document.getElementById('fmsg').value.trim();
+
+      // Extra safety net: make sure the phone field actually contains a real number,
+      // not just characters that happen to satisfy the pattern loosely.
+      var digitCount = (phone.match(/\d/g) || []).length;
+      if(digitCount < 10){
+        var phoneInput = document.getElementById('fphone');
+        phoneInput.setCustomValidity('Please enter a valid phone number (at least 10 digits).');
+        phoneInput.reportValidity();
+        phoneInput.addEventListener('input', function resetValidity(){
+          phoneInput.setCustomValidity('');
+          phoneInput.removeEventListener('input', resetValidity);
+        });
+        return;
+      }
 
       successMsg.style.display = 'none';
       errorMsg.style.display = 'none';
